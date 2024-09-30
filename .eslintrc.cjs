@@ -1,0 +1,186 @@
+/* eslint-env node */
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  plugins: [
+    '@typescript-eslint',
+    'import',
+    'react',
+  ],
+  parserOptions: {
+    project: [ './tsconfig.json' ],  // Include both backend and frontend tsconfig files
+    tsconfigRootDir: __dirname,
+  },
+  ignorePatterns: [
+    'coverage/',
+    'node_modules/',
+    'build/',
+    'public/',
+    '.next/',
+    '.eslintrc.js',
+    'next-env.d.ts',
+    'jest.config.js',
+    'next.config.js',
+  ],
+  root: true,
+  rules: {
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'no-const-assign': 'error',
+    'object-shorthand': 'error',
+    'quote-props': [ 'error', 'as-needed' ],
+    'no-prototype-builtins': 'error',
+    'prefer-object-spread': 'error',
+    'array-callback-return': 'error',
+    quotes: [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    'prefer-template': 'error',
+    'template-curly-spacing': 'error',
+    'wrap-iife': 'error',
+    'no-new-func': 'error',
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
+    'space-before-blocks': 'error',
+    'function-paren-newline': [
+      'error',
+      'multiline-arguments',
+    ],
+    'prefer-arrow-callback': 'error',
+    'arrow-spacing': 'error',
+    'arrow-parens': [
+      'error',
+      'as-needed',
+    ],
+    'no-confusing-arrow': 'error',
+    'implicit-arrow-linebreak': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-mutable-exports': 'error',
+    'object-curly-newline': 'error',
+    'dot-notation': 'error',
+    'one-var': [ 'error', 'never' ],
+    'no-multi-assign': 'error',
+    'operator-linebreak': 'error',
+    eqeqeq: 'error',
+    'no-case-declarations': 'error',
+    'no-unneeded-ternary': 'error',
+    'nonblock-statement-body-position': 'error',
+    'brace-style': 'error',
+    'no-else-return': 'error',
+    'spaced-comment': 'error',
+    '@typescript-eslint/indent': [ 'error', 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1,
+      // MemberExpression: null,
+      FunctionDeclaration: {
+        parameters: 1,
+        body: 1,
+      },
+      FunctionExpression: {
+        parameters: 1,
+        body: 1,
+      },
+      CallExpression: {
+        arguments: 1,
+      },
+      ArrayExpression: 1,
+      ObjectExpression: 1,
+      ImportDeclaration: 1,
+      flatTernaryExpressions: false,
+      // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+      ignoredNodes: [ 'JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild' ],
+      ignoreComments: false,
+    } ],
+    'space-before-blocks': 'error',
+    'keyword-spacing': 'error',
+    'space-infix-ops': 'error',
+    'eol-last': 'error',
+    'newline-per-chained-call': 'error',
+    'no-whitespace-before-property': 'error',
+    'padded-blocks': [ 'error', 'never' ],
+    'no-multiple-empty-lines': 'error',
+    'space-in-parens': 'error',
+    'array-bracket-spacing': [ 'error', 'always' ],
+    'object-curly-spacing': [ 'error', 'always' ],
+    'block-spacing': 'error',
+    'comma-spacing': [ 'error', { before: false, after: true } ],
+    'computed-property-spacing': 'error',
+    'key-spacing': 'error',
+    'no-trailing-spaces': [ 'error', {
+      skipBlankLines: true,
+    } ],
+    'comma-style': [ 'error', 'last', {
+      exceptions: {
+        ArrayExpression: false,
+        ArrayPattern: false,
+        ArrowFunctionExpression: false,
+        CallExpression: false,
+        FunctionDeclaration: false,
+        FunctionExpression: false,
+        ImportDeclaration: false,
+        ObjectExpression: false,
+        ObjectPattern: false,
+        VariableDeclaration: false,
+        NewExpression: false,
+      },
+    } ],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+      },
+    ],
+    semi: [ 'error', 'always' ],
+    // enforce spacing before and after semicolons
+    'semi-spacing': [ 'error', { before: false, after: true } ],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: [ 'const', 'let' ], next: 'expression' },
+    ],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        disallowTypeAnnotations: false,
+      },
+    ],
+    'react/jsx-tag-spacing': [
+      'error',
+      {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never',
+        beforeClosing: 'never',
+      },
+    ],
+    'react/jsx-indent': [ 'error', 2 ],
+    '@typescript-eslint/type-annotation-spacing': [ 'error', {
+      after: true, // Enforce space after the colon
+      before: false, // Do not enforce space before the colon
+      overrides: {
+        // Arrow functions
+        arrow: {
+          before: true,
+          after: true,
+        },
+      },
+    } ],
+    'no-extra-semi': 'error',
+  },
+};
