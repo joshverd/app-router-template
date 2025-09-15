@@ -9,15 +9,16 @@
     "linter-fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
-    "next": "^15.3.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "babel-plugin-react-compiler": "^19.1.0-rc.3",
+    "next": "^15.5.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "sass": "^1.79.4"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "eslint": "^8.56.0",

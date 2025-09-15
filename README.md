@@ -26,7 +26,7 @@ This is a [Next.js](https://nextjs.org/) project template using the App Router. 
 
 In the project directory, you can run:
 
-- `npm run start`: Runs the app in development mode.
+- `npm start`: Runs the app in development mode.
 - `npm run build`: Builds the app for production.
 
 ## Want to change things?
