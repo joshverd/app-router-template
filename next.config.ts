@@ -6,9 +6,7 @@ import type { NextConfig } from 'next';
 const STYLES_DIR = path.join(__dirname, 'src/app');
 
 const nextConfig: NextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
 
   // Provide Sass with a custom importer so it can resolve "@styles/…"
   sassOptions: {
